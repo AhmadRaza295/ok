@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css">
+    <title>Leather</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="nav">
+        <div class="logo">L.Leather</div>
+        <div class="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="links">
+          <div class="">
+            HOME <span><i class="ri-arrow-drop-down-fill"></i></span>
+          </div>
+          <div class="">
+            ABOUT US <span><i class="ri-arrow-drop-down-fill"></i></span>
+          </div>
+          <div class="">
+            OUR PRODUCTS <span><i class="ri-arrow-drop-down-fill"></i></span>
+          </div>
+          <div class="">
+            Customization <span><i class="ri-arrow-drop-down-fill"></i></span>
+          </div>
+          <div class="">
+            Contact <span><i class="ri-arrow-drop-down-fill"></i></span>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="imagea">
+          <img src="asset/headimage.png" alt="shoes" />
+        </div>
+      </div>
+    </div>
+    </div>
+    <script>
+        // JavaScript for toggling the navbar on smaller screens
+        const hamburger = document.querySelector(".hamburger");
+        const links = document.querySelector(".links");
+    
+        hamburger.addEventListener("click", () => {
+          links.classList.toggle("show");
+        });
+      </script>
+  </body>
+</html>

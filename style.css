@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #37617a;
+  --primary-color-dark: #0d1a20;
+  --secondary-color: #fb923c;
+  --white: #ffffff;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(to right bottom, #ca922a, #042c3f);
+}
+
+.container {
+  
+  min-height: 100vh;
+  max-width: 1300px;
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.nav {
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--white);
+  cursor: pointer;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.links div {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--white);
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.links div:hover {
+  color: var(--secondary-color);
+}
+
+.links div span {
+  font-size: 1.2rem;
+}
+
+.links .shopping__cart {
+  height: 50px;
+  width: 50px;
+  display: grid;
+  place-content: center;
+  border-radius: 100%;
+  font-size: 1.2rem;
+  color: var(--primary-color-dark);
+  background-color: var(--white);
+}
+
+.content {
+  justify-content: center;
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: center;
+}
+
+.imagea {
+  animation: shoe-animation 2s infinite;
+  overflow: hidden;
+}
+
+.imagea img {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  margin: auto;
+}
+
+@keyframes shoe-animation {
+  0% {
+    transform: translateY(px);
+  }
+  70% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+  }
+  
+  .hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--white);
+  }
+  
+  /* Responsive Styling */
+  @media (max-width: 768px) {
+    
+    .hamburger {
+      display: flex;
+    }
+  
+    .links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: var(--primary-color-dark);
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      z-index: 10; /* Added to make sure it's above other elements */
+    }
+  
+    .links.show {
+      display: flex;
+    }
+
+  }
+  
+  /* Ensuring content is below the navbar */
+  .content {
+    position: relative;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    z-index: 1; /* Added to make sure content stays behind the navigation */
+  }
